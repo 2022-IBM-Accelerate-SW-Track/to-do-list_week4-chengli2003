@@ -41,13 +41,13 @@ class AddTodo extends Component {
     event.preventDefault();
     const jsonObject = {
       id: this.state.id,
-      task: thi.state.content,
+      task: this.state.content,
       currentDate: this.state.date,
       dueDate: this.state.duedate,
     };
     Axios({
       method: "POST",
-      url: "http://localhost:<8080>/add/item",
+      url: "http://localhost:8080/add/item",
       data: { jsonObject },
       headers: {
         "Content-Type": "application/json",
